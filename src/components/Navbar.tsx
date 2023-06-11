@@ -30,12 +30,7 @@ export function NavBar() {
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" href="/">Home</Link>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" href="/about">About</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" href="/contact">Contact</Link>
-                            </li>
+                            
                         </ul>
                         <Link className="navbar-brand fw-bolder fs-4 mx-auto" href="/">HitchHub </Link>
                         {
