@@ -6,7 +6,7 @@ export interface Slot {
     destination: string;
     dateTime: String;
     availableSeats: number;
-    driver: Driver
+    driver?: Driver
 }
 export interface Driver {
     name: string;
