@@ -1,0 +1,6 @@
+.home{
+    background: rgb(0,101,219);
+    background: linear-gradient(90deg, rgb(0,101,219) 45%, rgb(0, 212, 255,1) 100%);
+    min-height: 585px;
+    padding-top: 100px;
+}
