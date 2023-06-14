@@ -17,7 +17,10 @@ const Passenger = () => {
     getSlots()
       .then((data) => {
         console.log(data)
-        setSlots(data)
+        setSlots(data.filter((slot: Slot) => {
+          const departure_time = new Date(slot.dateTime)
+          return departure_time > Date.now()
+        }))
       })
     fetchRequests()
 
@@ -95,7 +98,7 @@ export const SlotCard = ({ slot, request, filled }: { slot: Slot, request: Reque
           <Text c="dimmed">Destination:</Text> <Text> {slot.destination}</Text>
         </Grid.Col>
         <Grid.Col span={6}>
-          <Text c="dimmed">Date:</Text> <Text> {moment(slot.dateTime).format("DD/mm/yyyy")}</Text>
+          <Text c="dimmed">Date:</Text> <Text> {moment(slot.dateTime).format("DD/MM/yyyy")}</Text>
         </Grid.Col>
         {/* <Grid.Col span={6}>
           <Text c="dimmed">Seats: </Text> <Text>{slot.availableSeats}</Text>
