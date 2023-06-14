@@ -97,9 +97,9 @@ export const SlotCard = ({ slot, request, filled }: { slot: Slot, request: Reque
         <Grid.Col span={6}>
           <Text c="dimmed">Date:</Text> <Text> {moment(slot.dateTime).format("DD/mm/yyyy")}</Text>
         </Grid.Col>
-        <Grid.Col span={6}>
+        {/* <Grid.Col span={6}>
           <Text c="dimmed">Seats: </Text> <Text>{slot.availableSeats}</Text>
-        </Grid.Col>
+        </Grid.Col> */}
         <Grid.Col span={6}>
           <Text c="dimmed" weight={600}>Driver: </Text> <Text>{slot.driver.name}</Text>
         </Grid.Col>
